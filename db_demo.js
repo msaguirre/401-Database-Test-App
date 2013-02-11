@@ -83,7 +83,7 @@ function updateContent(){
 
 			
 	    	
-	    	transaction.executeSql("UPDATE text SET body=?, section=? WHERE id = 1", [body, section]);
+	    	transaction.executeSql("UPDATE text SET body=?, section=? WHERE rowid = 1", [body, section]);
 	    }
 	);	
 		selectAll();
