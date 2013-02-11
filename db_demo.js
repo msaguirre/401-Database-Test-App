@@ -58,9 +58,13 @@ function prePopulate(){
 	CONTENTDB.transaction(
 	    function (transaction) {
 		//Starter data when page is initialized
-		var data = ['Whats happenning','3'];  
+		var data1 = ['Hello World','1'];  
+		var data2 = ['Whats happenning','2'];  
+		var data3 = ['Goodbye!','3'];  
 		
-		transaction.executeSql("INSERT INTO text(body, section) VALUES (?, ?)", [data[0], data[1]]);
+		transaction.executeSql("INSERT INTO text(body, section) VALUES (?, ?)", [data1[0], data1[1]]);
+		transaction.executeSql("INSERT INTO text(body, section) VALUES (?, ?)", [data2[0], data2[1]]);
+		transaction.executeSql("INSERT INTO text(body, section) VALUES (?, ?)", [data3[0], data3[1]]);
 	    }
 	);	
 }
@@ -111,7 +115,7 @@ function dataSelectHandler(transaction, results){
         
         $('#content').html('<h4 id="body">Say '+ newFeature.body +'</h4>');
         
-        $('#greeting').html('Howdy-ho!');
+        $('#greeting').html('Welcome!');
        	 
         
        $('select#section').find('option[value='+newFeature.section+']').attr('selected','selected');
