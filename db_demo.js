@@ -59,12 +59,10 @@ function prePopulate(){
 	    function (transaction) {
 		//Starter data when page is initialized
 		var data1 = ['Hello World','1'];  
-		var data2 = ['Whats happenning','2'];  
-		var data3 = ['Goodbye!','3'];  
+
 		
 		transaction.executeSql("INSERT INTO text(body, section) VALUES (?, ?)", [data1[0], data1[1]]);
-		transaction.executeSql("INSERT INTO text(body, section) VALUES (?, ?)", [data2[0], data2[1]]);
-		transaction.executeSql("INSERT INTO text(body, section) VALUES (?, ?)", [data3[0], data3[1]]);
+
 	    }
 	);	
 }
